@@ -3,14 +3,14 @@ Allows you to set paths directly in strings instead of passing arrays
 
 ## How to use
 The requirement must appear in the app before other immutable actions (a good idea would be to place in the root of the app if uncertain)
-`
+```javascript
 require('immutable-short-string-notation');
 
 // somewhere else in the application you may use the string syntax
 ImmutableState.setIn('a.b.c.d.e', 42); // <- this is the short version made possible by immutable-short-string-notation
 ImmutableState.setIn('a.b.c.d.e'.split('.'), 42);
 ImmutableState.setIn(['a', 'b', 'c', 'd', 'e'], 42);
-`
+```
 All other ways still work
 
 ## Why ?
