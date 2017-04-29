@@ -1,4 +1,5 @@
 # immutable-short-string-notation
+
 Allows you to set paths directly in strings instead of passing arrays
 
 ## How to use
@@ -24,3 +25,13 @@ because writing `state.getIn(['node1', 'node23', 'node67'])` could be shorter
 and `state.getIn('node1.node23.node67'.split('.'))` feel wrong when it's been repeaded a tousand times
 
 so let's just remove the split as anyway we are sure we want to pass an array here
+
+## Installation (available on [npm](https://www.npmjs.com/package/immutable-short-string-notation))
+
+```bash
+npm install --save immutable-short-string-notation
+```
+or
+```bash
+yarn add immutable-short-string-notation --save
+```
