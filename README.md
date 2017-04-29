@@ -2,8 +2,8 @@
 Allows you to set paths directly in strings instead of passing arrays
 
 ## How to use
+The requirement must appear in the app before other immutable actions (a good idea would be to place in the root of the app if uncertain)
 `
-// place this at the root of your project
 require('immutable-short-string-notation');
 
 // somewhere else in the application you may use the string syntax
