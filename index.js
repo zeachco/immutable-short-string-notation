@@ -12,5 +12,9 @@ function forceParamToArray(target, fn, argIndex) {
 
 // This allows to use Immutable.Map.getIn('path.path2.path3')
 forceParamToArray(Immutable.Collection, 'getIn');
-// This allows to use Immutable.Map.setIn('path.path2.path3')
+// This allows to use Immutable.Map.setIn('path.path2.path3', ...)
 forceParamToArray(Immutable.Map, 'setIn');
+// This allows to use Immutable.Map.mergeDeepIn('path.path2.path3', {...})
+forceParamToArray(Immutable.Map, 'mergeDeepIn');
+
+module.exports = Immutable;
