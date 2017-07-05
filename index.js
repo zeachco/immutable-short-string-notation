@@ -16,5 +16,7 @@ forceParamToArray(Immutable.Collection, 'getIn');
 forceParamToArray(Immutable.Map, 'setIn');
 // This allows to use Immutable.Map.mergeDeepIn('path.path2.path3', {...})
 forceParamToArray(Immutable.Map, 'mergeDeepIn');
+// This allows to use Immutable.Map.deleteIn('path.path2.path3')
+forceParamToArray(Immutable.Map, 'deleteIn');
 
 module.exports = Immutable;
