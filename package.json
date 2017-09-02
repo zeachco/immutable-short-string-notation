@@ -6,6 +6,22 @@
   "author": "Olivier Rousseau-Guyot <zeachco@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "immutable": "^3.8.1"
+    "immutable": "*"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0"
+  },
+  "ava": {
+    "files": [
+      "*.spec.js"
+    ],
+    "verbose": true,
+    "color": true,
+    "serial": false,
+    "failFast": true,
+    "powerAssert": true
+  },
+  "scripts": {
+    "test": "ava"
   }
 }

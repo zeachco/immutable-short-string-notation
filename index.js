@@ -1,6 +1,6 @@
 var Immutable = require('immutable');
 
-function forceParamToArray(target, fn, argIndex) {
+function forceParamToArray(target = Immutable.Map, fn, argIndex) {
     argIndex = argIndex || 0;
     var originalFn = '__' + fn;
     target.prototype[originalFn] = target.prototype[fn];
@@ -10,13 +10,13 @@ function forceParamToArray(target, fn, argIndex) {
     }
 }
 
-// This allows to use Immutable.Map.getIn('path.path2.path3')
-forceParamToArray(Immutable.Collection, 'getIn');
-// This allows to use Immutable.Map.setIn('path.path2.path3', ...)
-forceParamToArray(Immutable.Map, 'setIn');
-// This allows to use Immutable.Map.mergeDeepIn('path.path2.path3', {...})
-forceParamToArray(Immutable.Map, 'mergeDeepIn');
-// This allows to use Immutable.Map.deleteIn('path.path2.path3')
-forceParamToArray(Immutable.Map, 'deleteIn');
+// Apply interceptor for these methods
+[
+    'getIn',
+    'setIn',
+    'mergeDeepIn',
+    'updateIn',
+    'deleteIn'
+].forEach(method => forceParamToArray(Immutable.Map, method));
 
 module.exports = Immutable;
