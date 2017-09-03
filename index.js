@@ -1,6 +1,6 @@
 var Immutable = require('immutable');
 
-function forceParamToArray(target = Immutable.Map, fn, argIndex) {
+function forceParamToArray(target, fn, argIndex) {
     argIndex = argIndex || 0;
     var originalFn = '__' + fn;
     target.prototype[originalFn] = target.prototype[fn];
