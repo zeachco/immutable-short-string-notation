@@ -17,6 +17,8 @@ function forceParamToArray(target = Immutable.Map, fn, argIndex) {
     'mergeDeepIn',
     'updateIn',
     'deleteIn'
-].forEach(method => forceParamToArray(Immutable.Map, method));
+].forEach(function(method) {
+    forceParamToArray(Immutable.Map, method);
+});
 
 module.exports = Immutable;
