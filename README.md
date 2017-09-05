@@ -17,12 +17,16 @@ state.setIn('a.b.c.d.e'.split('.'), 42);
 state.setIn(['a', 'b', 'c', 'd', 'e'], 42);
 state.getIn('a.b.c.d.e'); // still 42
 ```
-
+## It supports the following `Immutable.Map` methods [view tests](https://github.com/zeachco/immutable-short-string-notation/blob/master/istn.spec.js)
+  - getIn
+  - setIn
+  - mergeDeepIn
+  - updateIn
 
 ## Why ?
 
-because writing `state.getIn(['node1', 'node23', 'node67'])` could be shorter
-and `state.getIn('node1.node23.node67'.split('.'))` feel wrong when it's been repeaded a tousand times
+Because writing `state.getIn(['node1', 'node23', 'node67'])` could be shorter
+and `state.getIn('node1.node23.node67'.split('.'))` feel wrong when it's been repeated a tousand times
 
 so let's just remove the split as anyway we are sure we want to pass an array here
 
