@@ -1,27 +1,23 @@
 {
   "name": "immutable-short-string-notation",
   "version": "2.1.2",
-  "main": "index.js",
+  "main": "lib/main.js",
   "repository": "git@github.com:zeachco/immutable-short-string-notation.git",
   "author": "Olivier Rousseau-Guyot <zeachco@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "immutable": "*"
+    "immutable": "^4.0.0-rc.12"
   },
   "devDependencies": {
-    "ava": "^0.22.0"
-  },
-  "ava": {
-    "files": [
-      "*.spec.js"
-    ],
-    "verbose": true,
-    "color": true,
-    "serial": false,
-    "failFast": true,
-    "powerAssert": true
+    "@types/jest": "^23.3.9",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.1.6"
   },
   "scripts": {
-    "test": "ava"
+    "postinstall": "npm run build",
+    "test": "jest",
+    "prebuild": "npm run test",
+    "build": "tsc"
   }
 }

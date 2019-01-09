@@ -1,6 +1,6 @@
-var Immutable = require('immutable');
+import * as Immutable from 'immutable';
 
-function forceParamToArray(target, fn, argIndex) {
+function forceParamToArray(target:Function, fn:string, argIndex?:number) {
     argIndex = argIndex || 0;
     var originalFn = '__' + fn;
     target.prototype[originalFn] = target.prototype[fn];
@@ -17,8 +17,10 @@ function forceParamToArray(target, fn, argIndex) {
     'mergeDeepIn',
     'updateIn',
     'deleteIn'
-].forEach(function(method) {
+].forEach((method:string) => {
     forceParamToArray(Immutable.Map, method);
+    forceParamToArray(Immutable.List, method);
 });
 
-module.exports = Immutable;
+export {Immutable}
+export default Immutable;
