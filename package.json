@@ -1,6 +1,6 @@
 {
   "name": "immutable-short-string-notation",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "main": "lib/main.js",
   "repository": "git@github.com:zeachco/immutable-short-string-notation.git",
   "author": "Olivier Rousseau-Guyot <zeachco@gmail.com>",
